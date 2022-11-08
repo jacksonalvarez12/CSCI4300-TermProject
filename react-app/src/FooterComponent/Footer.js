@@ -16,6 +16,7 @@ const Footer = () => {
             <p>Created by Colby Eskew, Jackson Alvarez, and Joshua Bisnott</p>
         </Box>
     );
+
 }
 
 export default Footer;

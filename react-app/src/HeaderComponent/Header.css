@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     padding: 10px;
     background-color: rgb(251, 134, 153);
+    font-size: 1rem;
 }
 
 .home-button {
@@ -22,7 +23,7 @@ header {
 .login-container {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 10px;
 }
 
 .login-container button {
@@ -35,5 +36,12 @@ header {
 .login-container button:hover {
     cursor: pointer;
     background-color: white;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
 }
  
