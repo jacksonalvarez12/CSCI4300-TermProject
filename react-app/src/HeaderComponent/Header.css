@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(251, 134, 153);
+}
+
+.home-button {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(222, 222, 222);
+    margin: auto 0;
+}
+
+.home-button:hover {
+    background-color: white;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.login-container button {
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(222, 222, 222);
+}
+
+.login-container button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+ 

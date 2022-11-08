@@ -8,8 +8,8 @@ import Footer from './FooterComponent/Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Header/>
-    <App />
+    <Header auth={false}/>
+    <App/>
     <Footer/>
   </>
 );
