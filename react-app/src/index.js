@@ -8,7 +8,7 @@ import Footer from './FooterComponent/Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Header auth={false}/>
+    <Header auth={false} gettingLogin={true} gettingSignup={false}/>
     <App/>
     <Footer/>
   </>
