@@ -20,7 +20,7 @@ export default class Header extends React.Component {
 
     getLogin() {
         return <div className='login-container'>
-                <button onClick={this.login}>Login</button>
+                <button onClick={this.login()}>Login</button>
                 <button>Sign Up</button>
             </div>;
         /*alert(this.state.auth);
