@@ -1,6 +1,7 @@
 import './Header.css';
-import '../index.js';
+import '../index';
 import React from 'react';
+import LoginInfo from './FakeData';
 
 
 export default class Header extends React.Component {
@@ -11,6 +12,8 @@ export default class Header extends React.Component {
             gettingLogin: this.props.gettingLogin,
             gettingSignup: this.props.gettingSignup
         };
+        this.fakeLoginInfo = new LoginInfo();
+        this.user = '';
     }
 
     render() {
@@ -25,6 +28,7 @@ export default class Header extends React.Component {
     getLogin() {
         if (this.state.auth) {
             return <div className='login-container'>
+                <p>Hello <span className='italic'>{this.user}</span></p>
                 <button onClick={() => this.logout()}>Logout</button>
             </div>
 
@@ -49,7 +53,7 @@ export default class Header extends React.Component {
                     <label for="password-input">Password: </label>
                     <input id="password-input"></input>
                 </form>
-                
+
                 <button onClick={() => this.trySignup()}>Sign Up</button>
             </div>
 
@@ -80,6 +84,28 @@ export default class Header extends React.Component {
     }
 
     trySignup() {
+        
+        let userBox = document.getElementById('username-input');
+        let user = userBox.value.trim();
+        let passBox = document.getElementById('password-input');
+        let pass = passBox.value.trim();
+
+        if (user === '' || pass === '') {
+            if (user === '') {
+                userBox.style.border = 'solid red 2px';
+            } else {
+                userBox.style.border = 'solid black 1px';
+            }
+            if (pass === '') {
+                passBox.style.border = 'solid red 2px';
+            } else {
+                passBox.style.border = 'solid black 1px';
+            }
+            return;
+        }
+
+        this.fakeLoginInfo.addLogin(user, pass);
+        this.user = user;
         this.setState({
             auth: true,
             gettingSignup: false
@@ -87,10 +113,37 @@ export default class Header extends React.Component {
     }
 
     tryLogin() {
-        this.setState({
-            auth: true,
-            gettingLogin: false
-        }); 
+        let userBox = document.getElementById('username-input');
+        let user = userBox.value.trim();
+        let passBox = document.getElementById('password-input');
+        let pass = passBox.value.trim();
+
+        if (user === '' || pass === '') {
+            if (user === '') {
+                userBox.style.border = 'solid red 2px';
+            } else {
+                userBox.style.border = 'solid black 1px';
+            }
+            if (pass === '') {
+                passBox.style.border = 'solid red 2px';
+            } else {
+                passBox.style.border = 'solid black 1px';
+            }
+            return;
+        }
+
+        if (this.fakeLoginInfo.checkLogin(user, pass)) {
+            this.user = user;
+            this.setState({
+                auth: true,
+                gettingLogin: false
+            }); 
+        } else {
+            userBox.value = '';
+            userBox.style.border = 'solid red 2px';
+            passBox.value = '';
+            passBox.style.border = 'solid red 2px';
+        }
     }
 }
 

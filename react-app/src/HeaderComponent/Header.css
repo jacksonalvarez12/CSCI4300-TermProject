@@ -2,9 +2,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     background-color: rgb(251, 134, 153);
+    height: 40px;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .home-button {
@@ -13,7 +16,7 @@ header {
     padding: 5px;
     border: 1px solid black;
     background-color: rgb(222, 222, 222);
-    margin: auto 0;
+    font-size: 1rem;
 }
 
 .home-button:hover {
@@ -24,6 +27,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
 
 .login-container button {
@@ -31,6 +35,8 @@ header {
     padding: 5px;
     border: 1px solid black;
     background-color: rgb(222, 222, 222);
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .login-container button:hover {
@@ -43,5 +49,13 @@ header {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+}
+
+.login-container input {
+    border: solid black 1px;
+}
+
+.italic {
+    font-style: italic;
 }
  
