@@ -18,7 +18,6 @@ export default class Header extends React.Component {
 
     render() {
         this.loginHTML = this.getLogin();
-
         return <header>
             <a className="home-button" href="/">Home {this.auth}</a>
             {this.loginHTML}
@@ -81,6 +80,7 @@ export default class Header extends React.Component {
         this.setState({
             auth: false
         });
+        this.props.sendAuth(false);
     }
 
     trySignup() {
@@ -92,12 +92,12 @@ export default class Header extends React.Component {
 
         if (user === '' || pass === '') {
             if (user === '') {
-                userBox.style.border = 'solid red 2px';
+                userBox.style.border = 'solid red 1px';
             } else {
                 userBox.style.border = 'solid black 1px';
             }
             if (pass === '') {
-                passBox.style.border = 'solid red 2px';
+                passBox.style.border = 'solid red 1px';
             } else {
                 passBox.style.border = 'solid black 1px';
             }
@@ -110,6 +110,7 @@ export default class Header extends React.Component {
             auth: true,
             gettingSignup: false
         }); 
+        this.props.sendAuth(true);
     }
 
     tryLogin() {
@@ -120,12 +121,12 @@ export default class Header extends React.Component {
 
         if (user === '' || pass === '') {
             if (user === '') {
-                userBox.style.border = 'solid red 2px';
+                userBox.style.border = 'solid red 1px';
             } else {
                 userBox.style.border = 'solid black 1px';
             }
             if (pass === '') {
-                passBox.style.border = 'solid red 2px';
+                passBox.style.border = 'solid red 1px';
             } else {
                 passBox.style.border = 'solid black 1px';
             }
@@ -138,11 +139,12 @@ export default class Header extends React.Component {
                 auth: true,
                 gettingLogin: false
             }); 
+            this.props.sendAuth(true);
         } else {
             userBox.value = '';
-            userBox.style.border = 'solid red 2px';
+            userBox.style.border = 'solid red 1px';
             passBox.value = '';
-            passBox.style.border = 'solid red 2px';
+            passBox.style.border = 'solid red 1px';
         }
     }
 }
