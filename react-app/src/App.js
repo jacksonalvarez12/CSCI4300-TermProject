@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <>
         <Header auth={this.state.auth} gettingLogin={false} gettingSignup={false} sendAuth={this.getAuth}/>
-        <Body/>
+        <Body auth={this.state.auth}/>
         <Footer/>
       </>
     );

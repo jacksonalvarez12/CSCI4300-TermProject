@@ -84,7 +84,6 @@ export default class Header extends React.Component {
     }
 
     trySignup() {
-        
         let userBox = document.getElementById('username-input');
         let user = userBox.value.trim();
         let passBox = document.getElementById('password-input');
