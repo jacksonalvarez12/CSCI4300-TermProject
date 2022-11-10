@@ -1,5 +1,6 @@
 import './Body.css';
 import React from 'react';
+import Database from './FakeDatabase';
 
 class Body extends React.Component {
   constructor(props) {
@@ -12,22 +13,11 @@ class Body extends React.Component {
 
   // <p> elements just to test css
   render() {
-    return (
-      <div className="body">
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
-      <p style={{'font-size':'24px'}}>This is the body</p>
+    this.fakeFoodInfo = new Database();
+    this.cards = this.fakeFoodInfo.getCards();
+
+    return ( <div className="body">
+        <p>{JSON.stringify(this.cards)}</p>
       </div>
     );
   }
