@@ -58,4 +58,12 @@ header {
 .italic {
     font-style: italic;
 }
+
+header {
+    position: sticky;
+    left: 0;
+    right:0;
+    top: 0;
+    margin: 0;
+}
  
