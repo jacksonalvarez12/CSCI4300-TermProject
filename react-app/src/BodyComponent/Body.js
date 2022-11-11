@@ -1,6 +1,7 @@
 import './Body.css';
 import React from 'react';
 import Database from './FakeDatabase';
+import Card from '../CardComponent/Card';
 
 class Body extends React.Component {
   constructor(props) {
@@ -15,8 +16,12 @@ class Body extends React.Component {
     this.fakeFoodInfo = new Database();
     this.cards = this.fakeFoodInfo.getCards();
 
-    return ( <div className="body">
-        <p>{JSON.stringify(this.cards)}</p>
+    let cardsHTML = this.cards.map((card) =>
+      <Card auth={this.state.auth} src={card[0]} title={card[1]} ingredients={card[2]} link={card[3]}/>
+    );
+
+    return (<div className="body">
+        {cardsHTML}
       </div>
     );
   }
