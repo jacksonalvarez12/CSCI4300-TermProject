@@ -11,7 +11,6 @@ class Body extends React.Component {
     // auth not working yet
   }
 
-  // <p> elements just to test css
   render() {
     this.fakeFoodInfo = new Database();
     this.cards = this.fakeFoodInfo.getCards();
