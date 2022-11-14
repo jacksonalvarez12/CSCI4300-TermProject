@@ -141,6 +141,7 @@ export default class Header extends React.Component {
             }); 
             this.props.sendAuth(true);
         } else {
+            alert("Your username or password was incorrect. Please try again.");
             userBox.value = '';
             userBox.style.border = 'solid red 1px';
             passBox.value = '';
