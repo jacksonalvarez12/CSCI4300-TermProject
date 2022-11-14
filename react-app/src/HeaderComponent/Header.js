@@ -20,6 +20,7 @@ export default class Header extends React.Component {
         this.loginHTML = this.getLogin();
         return <header>
             <a className="home-button" href="/">Home {this.auth}</a>
+            <h1>Welcome to the Recipe Hub!</h1>
             {this.loginHTML}
         </header>
     }
