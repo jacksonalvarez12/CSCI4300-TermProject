@@ -19,7 +19,7 @@ class Body extends React.Component {
     let cardsHTML = this.cards.map((card) =>
       <Card auth={this.state.auth} src={card[0]} title={card[1]} ingredients={card[2]} link={card[3]}/>
     );
-
+    
     return (<div className="body">
         {cardsHTML}
       </div>
