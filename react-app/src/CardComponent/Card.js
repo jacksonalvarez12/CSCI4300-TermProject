@@ -7,6 +7,7 @@ class Card extends React.Component {
     super(props);
     this.state = {
       auth: this.props.auth,
+      id: this.props.id,
       src: this.props.src,
       title: this.props.title,
       ingredients: this.props.ingredients,
@@ -20,7 +21,7 @@ class Card extends React.Component {
         <li>{ing}</li>
     );
     return ( 
-        <div className='card'>
+        <div className='card' id={"card" + this.state.id}>
         <img src={this.state.src} alt={this.state.title}/>
         <h1>{this.state.title}</h1>
         <ul>{ingsHTML}</ul>
