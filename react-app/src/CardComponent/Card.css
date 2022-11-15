@@ -6,7 +6,14 @@
     border-style: solid;
     border-radius: 20px;
 }
-
+.card li {
+    font-style: italic;
+    color: rgb(151, 21, 40);
+}
+.card a{
+    color: rgb(151, 21, 40);
+    text-decoration: none;
+}
 .card img {
     max-width: 300px;
     min-width: 100px;
