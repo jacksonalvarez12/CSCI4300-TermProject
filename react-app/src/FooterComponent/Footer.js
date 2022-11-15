@@ -33,7 +33,6 @@ export default class Footer extends React.Component {
         return <footer>
             {addingHTML}
             <p>Created by Colby Eskew, Jackson Alvarez, and Joshua Bisnott</p>
-            <button onClick={() => this.props.sendAuth(! this.state.auth)}>Change Auth</button>
         </footer>
     }
 
@@ -85,7 +84,7 @@ export default class Footer extends React.Component {
             ingBox.style.border = 'solid black 1px';
         }
 
-        let arr = this.checkList(ing).arr;
+        //let arr = this.checkList(ing).arr;
 
         if (flag) return;
         this.setState({
