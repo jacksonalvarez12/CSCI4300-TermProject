@@ -19,12 +19,17 @@ footer {
 p {
     font-style: italic;
 }
-.add-button {
-    text-decoration: none;
+
+button {
     color: black;
     padding: 5px;
     border: 1px solid black;
     background-color: rgb(222, 222, 222);
     font-size: 1rem;
-    font-weight: bold
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
 }

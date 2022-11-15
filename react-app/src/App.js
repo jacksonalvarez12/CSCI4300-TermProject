@@ -16,7 +16,7 @@ class App extends React.Component {
       <>
         <Header auth={this.state.auth} gettingLogin={false} gettingSignup={false} sendAuth={this.setAuth}/>
         <Body auth={this.state.auth}/>
-        <Footer auth={this.state.auth}/>
+        <Footer auth={this.state.auth} adding={false}/>
       </>
     );
   }

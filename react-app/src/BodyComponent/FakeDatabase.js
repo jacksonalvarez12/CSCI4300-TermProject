@@ -9,10 +9,15 @@ export default class Database {
         this.card3 = {id:3, img:taco, name:'Taco', ingredients:['1 Shell', '1/4 Pound of Ground Beef', '3 oz of Shredded Cheese'], link:'https://www.yummly.com/recipe/Taco-Bell-Tacos-1105782/'};
 
         this.counter = 3;
+        this.cards = [this.card1, this.card2, this.card3]
     }
 
     getCards() {
-        return [this.card1, this.card2, this.card3];
+        return this.cards;
+    }
+
+    addCard(src, nm, ings, lk) {
+        this.cards.push({id:this.incrAndGet(), img:src, name:nm, ingredients:ings, link:lk});
     }
 
     incrAndGet() {
