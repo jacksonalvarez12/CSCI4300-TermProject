@@ -8,7 +8,7 @@ class Card extends React.Component {
     this.state = {
       auth: this.props.auth,
       src: this.props.src,
-      title: this.props.title,
+      name: this.props.name,
       ingredients: this.props.ingredients,
       link: this.props.link
     }
@@ -22,8 +22,8 @@ class Card extends React.Component {
     
     return ( 
         <div className='card'>
-        <img src={this.state.src} alt={this.state.title}/>
-        <h1>{this.state.title}</h1>
+        <img src={this.state.src} alt={this.state.name}/>
+        <h1>{this.state.name}</h1>
         <hr style={{
           color: "#971528",
           backgroundColor: "#971528",

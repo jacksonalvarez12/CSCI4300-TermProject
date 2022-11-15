@@ -17,7 +17,7 @@ class Body extends React.Component {
     this.cards = this.fakeFoodInfo.getCards();
 
     let cardsHTML = this.cards.map((card) =>
-      <Card auth={this.state.auth} src={card.img} title={card.title} ingredients={card.ingredients} link={card.link}/>
+      <Card auth={this.state.auth} src={card.img} name={card.name} ingredients={card.ingredients} link={card.link}/>
     );
     
     return (<div className="body">
