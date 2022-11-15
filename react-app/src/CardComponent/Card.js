@@ -16,7 +16,7 @@ class Card extends React.Component {
   }
 
   render() {
-    let ingsHTML = this.state.ingredients.map((ing)=>
+    let ingsHTML = this.state.ingredients.map((ing) =>
         <li>{ing}</li>
     );
     
@@ -34,7 +34,7 @@ class Card extends React.Component {
         }}
         />
         <ul>{ingsHTML}</ul>
-        <a href={this.state.link}>Click here for instructions!</a>
+        <a href={this.state.link}>Link to Recipe!</a>
         </div>
     );
   }
