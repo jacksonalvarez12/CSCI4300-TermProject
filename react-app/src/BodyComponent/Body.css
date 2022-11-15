@@ -4,6 +4,6 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     margin: 20px;
 }

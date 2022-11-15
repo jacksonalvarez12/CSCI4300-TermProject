@@ -20,10 +20,20 @@ class Card extends React.Component {
     let ingsHTML = this.state.ingredients.map((ing) =>
         <li>{ing}</li>
     );
+    
     return ( 
         <div className='card' id={"card" + this.state.id}>
         <img src={this.state.src} alt={this.state.title}/>
         <h1>{this.state.title}</h1>
+        <hr style={{
+          color: "#971528",
+          backgroundColor: "#971528",
+          height: '1px',
+          width: '95%',
+          borderRadius:'10px',
+          border:'1px solid'
+        }}
+        />
         <ul>{ingsHTML}</ul>
         <a href={this.state.link}>Link to Recipe!</a>
         </div>

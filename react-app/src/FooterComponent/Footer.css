@@ -7,7 +7,7 @@ footer {
     background-color: rgb(251, 134, 153);
     height: 40px;
     font-size: 1rem;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     right:0;
