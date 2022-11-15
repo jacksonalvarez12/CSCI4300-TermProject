@@ -1,6 +1,6 @@
 footer {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -13,8 +13,6 @@ footer {
     right:0;
     margin: 0;
     height: auto;
-
-
 }
 p {
     font-style: italic;
@@ -32,4 +30,11 @@ button {
 button:hover {
     cursor: pointer;
     background-color: white;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    align-items: center;
 }
