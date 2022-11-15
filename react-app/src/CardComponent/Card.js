@@ -16,15 +16,16 @@ class Card extends React.Component {
   }
 
   render() {
-    let ingsHTML = this.state.ingredients.map((ing) => {
-        <li>{ing}</li>
-    });
+    let ingsHTML = this.state.ingredients.map((ing) =>
+      <li>{ing}</li>
+    );
+
     return ( 
         <div className='card'>
         <img src={this.state.src} alt={this.state.title}/>
         <h1>{this.state.title}</h1>
         <ul>{ingsHTML}</ul>
-        <a href={this.state.link}>Link</a>
+        <a href={this.state.link}>Link to Recipe!</a>
         </div>
     );
   }
