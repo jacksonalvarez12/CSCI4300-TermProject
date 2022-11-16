@@ -13,6 +13,7 @@ footer {
     right:0;
     margin: 0;
     height: auto;
+    border-top: solid black 1px;
 }
 p {
     font-style: italic;

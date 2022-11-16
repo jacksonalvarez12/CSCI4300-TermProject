@@ -8,6 +8,7 @@ header {
     font-size: 1rem;
     font-weight: bold;
     overflow: hidden;
+    border-bottom: solid black 1px;
 }
 #greetingMsg {
     font-family: 'Times New Roman', Times, serif;
