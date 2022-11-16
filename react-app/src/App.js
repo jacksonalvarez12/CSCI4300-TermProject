@@ -13,7 +13,6 @@ class App extends React.Component {
 
   render() {
     return <>
-    <p>{this.state.auth}</p>
         <Header auth={this.state.auth} gettingLogin={false} gettingSignup={false} sendAuth={this.setAuth}/>
         <Body auth={this.state.auth}/>
         <Footer auth={this.state.auth} adding={false} sendAuth={this.setAuth}/>
