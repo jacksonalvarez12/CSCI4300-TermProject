@@ -81,7 +81,6 @@ export default class Header extends React.Component {
         this.setState({
             auth: false
         });
-        this.props.sendAuth(false);
     }
 
     trySignup() {
@@ -110,7 +109,6 @@ export default class Header extends React.Component {
             auth: true,
             gettingSignup: false
         }); 
-        this.props.sendAuth(true);
     }
 
     tryLogin() {
@@ -139,7 +137,6 @@ export default class Header extends React.Component {
                 auth: true,
                 gettingLogin: false
             }); 
-            this.props.sendAuth(true);
         } else {
             alert("Your username or password was incorrect. Please try again.");
             userBox.value = '';
