@@ -40,6 +40,7 @@ class Card extends React.Component {
           <button id={'edit-card' + this.state.id} onClick={() => this.edit()}>Edit</button>
           <button id={'delete-card' + this.state.id} onClick={() => this.delete()}>Delete</button>
           <button id={'exit-view-card' + this.state.id} style={{display: 'none'}} onClick={() => this.exitView()}>Exit View</button>
+          <button id={'finish-edit-card' + this.state.id} style={{display: 'none'}} onClick={() => this.finishEditing()}>Save and Exit</button>
         </div>
         </div>
     );
@@ -81,7 +82,24 @@ class Card extends React.Component {
   }
 
   edit() {
-    alert('edit not implemented');
+    let card = document.getElementById('card' + this.state.id);
+    card.style.backgroundColor = 'pink';
+    card.style.maxWidth = "none";
+    card.style.width = '80%';
+    
+    let box = document.getElementById('card-container');
+    let allCards = Array.from(box.childNodes)
+    let otherCards = allCards.filter(card => card.id !== 'card' + this.state.id);
+    otherCards.forEach(card => card.style.display = 'none');
+
+    document.getElementById('view-card' + this.state.id).style.display = 'none';
+    document.getElementById('edit-card' + this.state.id).style.display = 'none';
+    document.getElementById('delete-card' + this.state.id).style.display = 'none';
+    document.getElementById('finish-edit-card' + this.state.id).style.display = 'inline';
+  }
+
+  finishEdit() {
+    
   }
 
   delete() {
