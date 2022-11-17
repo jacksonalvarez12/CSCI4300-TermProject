@@ -6,6 +6,7 @@
     border-style: solid;
     border-radius: 20px;
     max-width: 400px;
+    background-color: rgb(237, 218, 193);
 }
 .card li {
     font-style: italic;
