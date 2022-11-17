@@ -12,11 +12,27 @@
     color: rgb(151, 21, 40);
 }
 .card a{
-    color: rgb(151, 21, 40);
+    padding: 5px;
+    border: solid 2px rgb(151, 21, 40);
+    border-radius: 12%;
+    background-color: rgb(151, 21, 40);
+    color: white;
     text-decoration: none;
 }
+
+.card a:hover {
+    background-color: rgb(205, 225, 250);
+    color: rgb(151, 21, 40);
+}
+
 .card img {
     max-width: 250px;
     min-width: 100px;
     height: 200px;
+}
+
+.card-buttons {
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
 }

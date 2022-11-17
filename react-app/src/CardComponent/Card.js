@@ -36,9 +36,30 @@ class Card extends React.Component {
         />
         <ul>{ingsHTML}</ul>
         <a href={this.state.link}>Link to Recipe!</a>
+        <div className='card-buttons'>
+          <button onClick={() => this.view()}>View</button>
+          <button onClick={() => this.edit()}>Edit</button>
+          <button onClick={() => this.delete()}>Delete</button>
+        </div>
         </div>
     );
   }
+
+  view() {
+    alert('view not implemented');
+  }
+
+  edit() {
+    alert('edit not implemented');
+  }
+
+  delete() {
+    let box = document.getElementById('card-container');
+    box.removeChild(document.getElementById('card' + this.state.id));
+  }
+
+
+
 }
 
 export default Card;
