@@ -34,7 +34,7 @@ class Card extends React.Component {
         }}
         />
         <ul>{ingsHTML}</ul>
-        <a href={this.state.link}>Link to Recipe!</a>
+        <a href={this.state.link} target='_blank' rel="noopener noreferrer">Link to Recipe!</a>
         <div className='card-buttons' id='card-buttons-container'>
           <button id={'view-card' + this.state.id} onClick={() => this.view()}>View</button>
           <button id={'edit-card' + this.state.id} onClick={() => this.edit()}>Edit</button>
