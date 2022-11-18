@@ -102,6 +102,9 @@ export default class Footer extends React.Component {
                 finalArray.push(ing);
             }
         });  
+        if (finalArray.length === 0) {
+            flag = true;
+        }
         return {invalid: flag, arr: finalArray};
     }
     
