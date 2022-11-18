@@ -127,9 +127,7 @@ class Card extends React.Component {
     document.getElementById('ings-display' + this.state.id).style.display = 'none';
     document.getElementById('ings-edit-container' + this.state.id).style.display = 'flex';
 
-    alert(this.state.ingredients);
     let ingsText = this.state.ingredients.join(', ');
-    alert(ingsText);
     document.getElementById('ings-edit' + this.state.id).defaultValue = ingsText;
 
   }

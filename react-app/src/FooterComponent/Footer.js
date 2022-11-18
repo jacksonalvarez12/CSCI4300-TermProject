@@ -103,10 +103,7 @@ export default class Footer extends React.Component {
         let cardContainer = document.getElementById('card-container');
         let allCards = Array.from(cardContainer.childNodes);
         allCards.push(newCard);
-        let allCardsHTML = allCards.map((card) => card);
-            //<Card auth={this.state.auth} id={card.state.id} src={card.state.src} title={card.state.title} ingredients={card.state.ingredients} link={card.state.link}/>
-       //);
-        ReactDOM.createRoot(cardContainer).render(allCardsHTML);
+        
 
         this.setState({
             adding: false
