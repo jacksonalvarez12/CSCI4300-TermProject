@@ -36,10 +36,14 @@ export default class Header extends React.Component {
             return <div className='login-container'>
 
                 <form>
-                    <label for="username-input">Username: </label>
-                    <input id="username-input"></input>
-                    <label for="password-input">Password: </label>
-                    <input id="password-input"></input>
+                    <div className='login-input-container'>
+                        <label for="username-input">Username: </label>
+                        <input id="username-input"></input>
+                    </div>
+                    <div className='login-input-container'>
+                        <label for="password-input">Password: </label>
+                        <input id="password-input"></input>
+                    </div>
                 </form>
 
                 <button onClick={() => this.tryLogin()}>Login</button>
@@ -48,10 +52,14 @@ export default class Header extends React.Component {
         } else if (this.state.gettingSignup) {
             return <div className='login-container'>
                 <form>
-                    <label for="username-input">Username: </label>
-                    <input id="username-input"></input>
-                    <label for="password-input">Password: </label>
-                    <input id="password-input"></input>
+                    <div className='login-input-container'>
+                        <label for="username-input">Username: </label>
+                        <input id="username-input"></input>
+                    </div>
+                    <div className='login-input-container'>
+                        <label for="password-input">Password: </label>
+                        <input id="password-input"></input>
+                    </div>
                 </form>
 
                 <button onClick={() => this.trySignup()}>Sign Up</button>

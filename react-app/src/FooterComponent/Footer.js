@@ -2,7 +2,6 @@ import './Footer.css';
 import React from 'react';
 import Database from '../BodyComponent/FakeDatabase';
 import Card from '../CardComponent/Card';
-import ReactDOM from 'react-dom/client';
 
 export default class Footer extends React.Component {
 

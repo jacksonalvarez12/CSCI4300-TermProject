@@ -74,4 +74,10 @@ h1 {
     text-align: center;
     font-size: 1.5em;
 }
+
+.login-input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
  
