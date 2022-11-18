@@ -22,27 +22,6 @@ class Card extends React.Component {
     
     return ( 
         <div className='card' id={"card" + this.state.id}>
-<<<<<<< HEAD
-        <img src={this.state.src} alt={this.state.title}/>
-        <h1>{this.state.title}</h1>
-        <hr style={{
-          color: "#971528",
-          backgroundColor: "#971528",
-          height: '1px',
-          width: '95%',
-          borderRadius:'10px',
-          border:'1px solid'
-        }}
-        />
-        <ul>{ingsHTML}</ul>
-        <a href={this.state.link} target='_blank' rel="noopener noreferrer">Link to Recipe!</a>
-        <div className='card-buttons' id='card-buttons-container'>
-          <button id={'view-card' + this.state.id} onClick={() => this.view()}>View</button>
-          <button id={'edit-card' + this.state.id} onClick={() => this.edit()}>Edit</button>
-          <button id={'delete-card' + this.state.id} onClick={() => this.delete()}>Delete</button>
-          <button id={'exit-view-card' + this.state.id} style={{display: 'none'}} onClick={() => this.exitView()}>Exit View</button>
-        </div>
-=======
           <div style={{display: 'none'}} className='label-input' id={'img-edit-container' + this.state.id}>
             <label for='img-edit'>Link to Image: </label>
             <input id={'img-edit' + this.state.id}></input>
@@ -79,7 +58,6 @@ class Card extends React.Component {
             <button id={'exit-view-card' + this.state.id} style={{display: 'none'}} onClick={() => this.exitView()}>Exit View</button>
             <button id={'finish-edit-card' + this.state.id} style={{display: 'none'}} onClick={() => this.finishEditing()}>Save and Exit</button>
           </div>
->>>>>>> 7f3af08d3066fa8898a4620e2918f1de9d9c31a3
         </div>
     );
   }
