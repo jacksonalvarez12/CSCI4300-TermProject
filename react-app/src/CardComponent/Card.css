@@ -7,6 +7,7 @@
     border-radius: 20px;
     max-width: 400px;
     background-color: rgb(237, 218, 193);
+    gap: 20px;
 }
 .card li {
     font-style: italic;
@@ -36,4 +37,16 @@
     padding-top: 15px;
     display: flex;
     gap: 10px;
+}
+
+.label-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+input {
+    border: solid black 1px;
+    width: 55%
 }
