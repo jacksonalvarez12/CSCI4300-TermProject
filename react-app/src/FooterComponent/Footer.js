@@ -1,5 +1,8 @@
 import './Footer.css';
 import React from 'react';
+import Database from '../BodyComponent/FakeDatabase';
+import Card from '../CardComponent/Card';
+import ReactDOM from 'react-dom/client';
 
 export default class Footer extends React.Component {
 
@@ -9,6 +12,7 @@ export default class Footer extends React.Component {
             auth: this.props.auth,
             adding: this.props.adding
         }
+        this.fakeDatabase = new Database();
     }
 
     render() {
@@ -16,14 +20,22 @@ export default class Footer extends React.Component {
         if (this.state.adding) {
             addingHTML = <>
                 <form>
-                    <label for="src-input">Link to Image: </label>
-                    <input id="src-input"></input>
-                    <label for="title-input">Title: </label>
-                    <input id="title-input"></input>
-                    <label for="ingredients-input">Ingredients: </label>
-                    <input id="ingredients-input"></input>
-                    <label for="link-input">Link to Recipe: </label>
-                    <input id="link-input"></input>
+                    <div class='add-input-container'>
+                        <label for="src-input">Link to Image: </label>
+                        <input id="src-input"></input>
+                    </div>
+                    <div class='add-input-container'>
+                        <label for="title-input">Title: </label>
+                        <input id="title-input"></input>
+                    </div>
+                    <div class='add-input-container'>
+                        <label for="ingredients-input">Ingredients: </label>
+                        <input id="ingredients-input"></input>
+                    </div>
+                    <div class='add-input-container'>
+                        <label for="link-input">Link to Recipe: </label>
+                        <input id="link-input"></input>
+                    </div>
                 </form>
                 <button onClick={() => this.submitAdd()}>Submit</button>
             </>
@@ -84,9 +96,15 @@ export default class Footer extends React.Component {
             ingBox.style.border = 'solid black 1px';
         }
 
-        //let arr = this.checkList(ing).arr;
-
         if (flag) return;
+
+        let arr = this.checkList(ing).arr;
+        let newCard = <Card auth={this.state.auth} id={this.fakeDatabase.incrAndGet()} src={src} title={title} ingredients={arr} link={link}/>;
+        let cardContainer = document.getElementById('card-container');
+        let allCards = Array.from(cardContainer.childNodes);
+        allCards.push(newCard);
+        
+
         this.setState({
             adding: false
         });

@@ -36,6 +36,16 @@ button:hover {
 form {
     display: flex;
     flex-flow: row wrap;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
+
+.add-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 300px;
+    gap: 10px;
+}
+
+
