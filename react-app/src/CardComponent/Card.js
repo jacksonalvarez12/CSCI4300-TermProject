@@ -50,7 +50,7 @@ class Card extends React.Component {
             <label for='link-edit'>Link to Recipe: </label>
             <input id={'link-edit' + this.state.id}></input>
           </div>
-          <a href={this.state.link} target='_blank' id={'link-display' + this.state.id}>Link to Recipe!</a>
+          <a href={this.state.link} target='_blank' rel="noopener noreferrer" id={'link-display' + this.state.id}>Link to Recipe!</a>
           <div className='card-buttons' id='card-buttons-container'>
             <button id={'view-card' + this.state.id} onClick={() => this.view()}>View</button>
             <button id={'edit-card' + this.state.id} onClick={() => this.edit()}>Edit</button>
